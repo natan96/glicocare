@@ -5,9 +5,8 @@ import { classificarGlicemia } from '@/lib/utils/glicemia'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(req: NextRequest) {
+  const resend = new Resend(process.env.RESEND_API_KEY)
   const { userId, valor } = await req.json()
 
   if (!userId || !valor) {
