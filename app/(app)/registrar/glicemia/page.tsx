@@ -66,6 +66,7 @@ export default function RegistrarGlicemiaPage() {
 
     toast.success('Glicemia registrada!')
     router.push('/dashboard')
+    router.refresh()
   }
 
   return (
